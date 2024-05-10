@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ngdemo23/pages/lesson2/bloc_builder_page.dart';
 import 'package:ngdemo23/pages/lesson3/multi_repository_page.dart';
 import 'package:ngdemo23/pages/lesson3/single_repository_page.dart';
+import 'package:ngdemo23/pages/lesson4/bloc_selector_page.dart';
 
 import 'lesson1/bloc_provider_page.dart';
 import 'lesson1/multi_bloc_provider_page.dart';
@@ -117,7 +118,24 @@ class _HomePageState extends State<HomePage> {
                 height: 45,
                 width: double.infinity,
                 child: MaterialButton(
-                  child: Text("BlocListener"),
+                  child: Text("Bloc Selector"),
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const BlocSelectorPage()),
+                    );
+                  },
+                ),
+              ),
+
+              Container(
+                margin: EdgeInsets.only(top: 10),
+                height: 45,
+                width: double.infinity,
+                child: MaterialButton(
+                  child: Text("Bloc Listener"),
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
@@ -131,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                 height: 45,
                 width: double.infinity,
                 child: MaterialButton(
-                  child: Text("BlocConsumer"),
+                  child: Text("Bloc Consumer"),
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
