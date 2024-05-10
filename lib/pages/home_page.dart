@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ngdemo23/pages/lesson2/bloc_builder_page.dart';
+import 'package:ngdemo23/pages/lesson3/multi_repository_page.dart';
+import 'package:ngdemo23/pages/lesson3/single_repository_page.dart';
 
 import 'lesson1/bloc_provider_page.dart';
 import 'lesson1/multi_bloc_provider_page.dart';
@@ -85,7 +87,10 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const SingleRepositoryPage()),
+                    );
                   },
                 ),
               ),
@@ -99,7 +104,10 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const MultiRepositoryPage()),
+                    );
                   },
                 ),
               ),
