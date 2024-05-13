@@ -5,6 +5,7 @@ import 'package:ngdemo23/pages/lesson3/single_repository_page.dart';
 import 'package:ngdemo23/pages/lesson4/bloc_selector_page.dart';
 import 'package:ngdemo23/pages/lesson5/bloc_listener_page.dart';
 import 'package:ngdemo23/pages/lesson6/bloc_consumer_page.dart';
+import 'package:ngdemo23/pages/lesson7/movie_page.dart';
 
 import 'lesson1/bloc_provider_page.dart';
 import 'lesson1/multi_bloc_provider_page.dart';
@@ -175,7 +176,10 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const MoviePage()),
+                    );
                   },
                 ),
               ),
